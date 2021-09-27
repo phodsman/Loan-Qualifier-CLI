@@ -107,26 +107,28 @@ def save_qualifying_loans(qualifying_loans):
     Args:
         qualifying_loans (list of lists): The qualifying bank loans.
     """
-    
+    # Exits if there are no qualifying loans and informs user
     if len(qualifying_loans) == 0:
         sys.exit("There are no qualifying loans to save to file.")
     
+    # Queries user and exits without saving if user does not wish to save.
     want_to_save = questionary.confirm("Save the list of qualifying loans to file?").ask()
     if want_to_save == False:
         sys.exit("Exiting without saving.")
 
+    # Asks user where to save and extracts the directory from the path entered.
     csvpath = questionary.text("Enter a file path to output the qualifying loans (.csv):").ask()
     csvpath_directory = Path(csvpath).parents[0]
     
-
+    # Checks if the directory exists, if not queries user if they wish to create it and does so if they agree.
     if not csvpath_directory.exists():
         create_directory_query = questionary.confirm(f"Folder {csvpath_directory} does not exist. Create folder and save?").ask()
         if create_directory_query == False:
             sys.exit()
         Path.mkdir(csvpath_directory)
 
+    # Saves qualifying loans in path specified and informs user.
     csvpath = Path(csvpath)
-
     save_csv(csvpath, qualifying_loans)
     print(f"Qualifying loans information saved in {csvpath}")
 
