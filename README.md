@@ -41,10 +41,19 @@ The git bash / terminal input to run this function is:
 
 Some usage examples:
 
-![]()
+![](https://github.com/phodsman/Loan-Qualifier-CLI/blob/main/Screenshot%202021-09-27%20112931.png?raw=true)
 
+![](https://github.com/phodsman/Loan-Qualifier-CLI/blob/main/Screenshot%202021-09-27%20120216.png?raw=true)
 
+![](https://github.com/phodsman/Loan-Qualifier-CLI/blob/main/Screenshot%202021-09-27%20120257.png?raw=true)
 
+![](https://github.com/phodsman/Loan-Qualifier-CLI/blob/main/Screenshot%202021-09-27%20120351.png?raw=true)
+
+![](https://github.com/phodsman/Loan-Qualifier-CLI/blob/main/Screenshot%202021-09-27%20120618.png?raw=true)
+
+![](https://github.com/phodsman/Loan-Qualifier-CLI/blob/main/Screenshot%202021-09-27%20120704.png?raw=true)
+
+![](https://github.com/phodsman/Loan-Qualifier-CLI/blob/main/Screenshot%202021-09-27%20124518.png?raw=true)
 
 ---
 
