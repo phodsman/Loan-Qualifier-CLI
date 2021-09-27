@@ -1,5 +1,5 @@
 # Loan-Qualifier-CLI
-This program uses a command line interface to ask the user for their loan application information and the path to a data set of available loans. It filters those loans according to the information provided and offers to save the results to a CSV file. The command line interface is intended to increase usability for the user.
+This program uses a command line interface to ask the user for their loan application information and the path to a comma separated value (CSV) data set of available loans. It filters those loans according to the information provided and offers to save the results to a CSV file. The command line interface is intended to increase usability for the user.
 
 ---
 
@@ -28,11 +28,9 @@ For questionary to work, you must type in git bash or mac terminal:
 
 ## Usage
 
-This section should include screenshots, code blocks, or animations explaining how to use your project.
-
 This program requires as input a CSV file that is structured as rows of comma separated lists, in the following format:
 
-![screenshot of CSV input file opened in notepad]()
+![Screenshot of CSV file for input in notepad](https://github.com/phodsman/Loan-Qualifier-CLI/blob/main/Screenshot%202021-09-27%20124518.png?raw=true)
 
 The git bash / terminal input to run this function is:
 
@@ -40,25 +38,29 @@ The git bash / terminal input to run this function is:
 
 Some usage examples:
 
-![](https://github.com/phodsman/Loan-Qualifier-CLI/blob/main/Screenshot%202021-09-27%20112931.png?raw=true)
+Found loans, saved in new folder:  
+![](https://github.com/phodsman/Loan-Qualifier-CLI/blob/main/Screenshot%202021-09-27%20112931.png?raw=true)  
 
 ![](https://github.com/phodsman/Loan-Qualifier-CLI/blob/main/Screenshot%202021-09-27%20120216.png?raw=true)
 
+Use the tab key to show available files and folders instead of manually typing the path:  
 ![](https://github.com/phodsman/Loan-Qualifier-CLI/blob/main/Screenshot%202021-09-27%20120257.png?raw=true)
 
+No qualifying loans found:  
 ![](https://github.com/phodsman/Loan-Qualifier-CLI/blob/main/Screenshot%202021-09-27%20120351.png?raw=true)
 
+Deciding not to create a new folder:  
 ![](https://github.com/phodsman/Loan-Qualifier-CLI/blob/main/Screenshot%202021-09-27%20120618.png?raw=true)
 
+Deciding not to save the output to file:
 ![](https://github.com/phodsman/Loan-Qualifier-CLI/blob/main/Screenshot%202021-09-27%20120704.png?raw=true)
-
-![](https://github.com/phodsman/Loan-Qualifier-CLI/blob/main/Screenshot%202021-09-27%20124518.png?raw=true)
 
 ---
 
 ## Contributors
 
-In this section, list all the people who contribute to this project. You might want recruiters or potential collaborators to reach you, so include your contact email and, optionally, your LinkedIn or Twitter profile.
+This code was adapted from the Loan Qualifier code © 2020 - 2021 Trilogy Education Services, a 2U, Inc. brand.
+Additional coding for usability was added by Preston Hodsman, phodsman@yahoo.com
 
 ---
 
