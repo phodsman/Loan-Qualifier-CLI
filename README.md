@@ -22,6 +22,7 @@ See:
 - [Git install files](https://git-scm.com/downloads) (In mac you can use the terminal)
 
 For questionary to work, you must type in git bash or mac terminal:
+
 ```pip install pip```
 
 
@@ -35,7 +36,7 @@ This program requires as input a CSV file that is structured as rows of comma se
 
 The git bash / terminal input to run this function is:
 
-``` $ python app.py
+``` $ python app.py```
 
 Some usage examples:
 
