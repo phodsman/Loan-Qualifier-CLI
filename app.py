@@ -26,7 +26,7 @@ from qualifier.filters.loan_to_value import filter_loan_to_value
 
 
 def load_bank_data():
-    """Ask for the file path to the latest banking data and load the CSV file.
+    """Ask for the file path to the latest banking data and load the CSV file. Uses the questionary path function for auto-fill to increase ease of entry.
 
     Returns:
         The bank data from the data rate sheet CSV file.
@@ -102,7 +102,7 @@ def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_valu
 
 
 def save_qualifying_loans(qualifying_loans):
-    """Saves the qualifying loans to a CSV file. Exits if there are no qualifying loans, if the user declines to save, or if an invalid path is entered.
+    """Saves the qualifying loans to a CSV file. Exits if there are no qualifying loans or if the user declines to save. Alerts the user if the path entered does not exist and asks if the user would like to create the folder entered. Exits if the user declines, otherwise creates the folder and writes to file.
 
     Args:
         qualifying_loans (list of lists): The qualifying bank loans.
