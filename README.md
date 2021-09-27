@@ -5,8 +5,6 @@ This program uses a command line interface to ask the user for their loan applic
 
 ## Technologies
 
-Describe the technologies required to use your project such as programming languages, libraries, frameworks, and operating systems. Be sure to include the specific versions of any critical dependencies that you have used in the stable version of your project.
-
 This python 3.7 program uses the sys, fire, questionary, and pathlib libraries as they are current on 9/27/2021. It was tested in a git bash environment in Windows 10 and also works on python 3.8.8. 
 
 It uses calculator functions written to calculate debt to income and loan to value ratios, and filter functions for a list of loans available by the max loan size, credit score, debt to income ratio, and loan to value ratio compared to the user entered amounts.
@@ -24,7 +22,7 @@ See:
 - [Git install files](https://git-scm.com/downloads) (In mac you can use the terminal)
 
 For questionary to work, you must type in git bash or mac terminal:
-```pip install pip
+```pip install pip```
 
 
 ## Usage
