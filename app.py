@@ -10,8 +10,9 @@ import sys
 import fire
 import questionary
 from pathlib import Path
+from pathlib import PurePath
 
-from qualifier.utils.fileio import load_csv
+from qualifier.utils.fileio import load_csv, save_csv
 
 from qualifier.utils.calculators import (
     calculate_monthly_debt_ratio,
@@ -31,10 +32,8 @@ def load_bank_data():
         The bank data from the data rate sheet CSV file.
     """
 
-    csvpath = questionary.text("Enter a file path to a rate-sheet (.csv):").ask()
+    csvpath = questionary.path("Enter a file path to a rate-sheet (.csv):").ask()
     csvpath = Path(csvpath)
-    if not csvpath.exists():
-        sys.exit(f"Oops! Can't find this path: {csvpath}")
 
     return load_csv(csvpath)
 
@@ -103,20 +102,33 @@ def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_valu
 
 
 def save_qualifying_loans(qualifying_loans):
-    """Saves the qualifying loans to a CSV file.
+    """Saves the qualifying loans to a CSV file. Exits if there are no qualifying loans, if the user declines to save, or if an invalid path is entered.
 
     Args:
         qualifying_loans (list of lists): The qualifying bank loans.
     """
     
     if len(qualifying_loans) == 0:
-        print("There are no qualifying loans to save to file.")
-        return
+        sys.exit("There are no qualifying loans to save to file.")
     
+    want_to_save = questionary.confirm("Save the list of qualifying loans to file?").ask()
+    if want_to_save == False:
+        sys.exit("Exiting without saving.")
+
+    csvpath = questionary.text("Enter a file path to output the qualifying loans (.csv):").ask()
+    csvpath_directory = Path(csvpath).parents[0]
     
 
-    csvpath = Path('qualifying_loans.csv')
+    if not csvpath_directory.exists():
+        create_directory_query = questionary.confirm(f"Folder {csvpath_directory} does not exist. Create folder and save?").ask()
+        if create_directory_query == False:
+            sys.exit()
+        Path.mkdir(csvpath_directory)
+
+    csvpath = Path(csvpath)
+
     save_csv(csvpath, qualifying_loans)
+    print(f"Qualifying loans information saved in {csvpath}")
 
 
 def run():
